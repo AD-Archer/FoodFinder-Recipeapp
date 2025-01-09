@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Finder Sign-In</title>
+</head>
+<body>
+    <h1>Welcome to Food Finder!</h1>
+    <form action="/signup" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Sign Up">
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+</body>
+</html>
