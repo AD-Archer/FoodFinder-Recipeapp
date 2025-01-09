@@ -1,18 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Finder Login</title>
+    <title>Food Finder - Login</title>
+    <%- include('../partials/bootstrap') %>
 </head>
 <body>
-    <h1>Welcome to Food Finder!</h1>
-    <form action="/login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <input type="submit" value="Login">
-    </form>
-    <p>Don't have an account? <a href="/signup">Sign Up</a></p>
+    <%- include('../partials/header') %>
+    
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="card shadow-sm" style="min-width: 300px; max-width: 400px;">
+            <div class="card-body p-4">
+                <h1 class="text-center mb-4">Login</h1>
+                <form action="/login" method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+                <p class="text-center mt-3">
+                    Don't have an account? <a href="/signup">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
 </body>
 </html>

@@ -9,6 +9,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import 'dotenv/config';
 import session from 'express-session';
+import bodyParser from 'body-parser';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,19 +32,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// Add this middleware to set proper headers for CSS files
-// app.use((req, res, next) => {
-//     if (req.url.endsWith('.css')) {
-//         res.setHeader('Content-Type', 'text/css');
-//         // Prevent caching
-//         res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-//         res.setHeader('Pragma', 'no-cache');
-//         res.setHeader('Expires', '0');
-//     }
-//     next();
-// });
-
-// Routes
 // Home route (public)
 app.get('/', (req, res) => {
     res.render('pages/landingpage');

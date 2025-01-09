@@ -1,11 +1,30 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Finder - The Recipe App</title>
+    <%- include('../partials/bootstrap') %>
+
 </head>
+
 <body>
-    <h1>This is the entry point to my application</h1>
-    <p>Please <a href="/login">login</a> or <a href="/signup">sign up</a> to access the Food Finder application.</p>
+    <%- include('../partials/header') %>
+    
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <h1 class="display-4 mb-4">Welcome to Food Finder</h1>
+            <p class="lead mb-4">Discover and save your favorite recipes!</p>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                <a href="/login" class="btn btn-primary btn-lg px-4">Login</a>
+                <a href="/signup" class="btn btn-outline-primary btn-lg px-4">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
+
 </body>
+
 </html>

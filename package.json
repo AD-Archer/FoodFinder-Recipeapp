@@ -24,13 +24,16 @@
   },
   "homepage": "https://github.com/AD-Archer/FoodFinder-Recipeapp",
   "dependencies": {
+    "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.3",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.7",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sequelize": "^6.37.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
